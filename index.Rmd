@@ -28,30 +28,3 @@ readxl::read_xlsx("base_marinha.xlsx") %>%
 
 ```
 
-
-
-```{r, results='asis'}
-
-cat(
-'<style>
-header {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    border-bottom: solid 1px #275da1;
-    text-align: center;
-}
-</style>'
-)
-
-
-cat(
-'<style>
-.dataTables_wrapper  .dataTables_filter {
-    width: 100%;
-    float: none;
-    text-align: left;
-}
-</style>'
-)
-
-```
