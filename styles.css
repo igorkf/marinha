@@ -1,0 +1,14 @@
+
+header {
+    padding-top: 10px;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #275da1;
+    text-align: center;
+}
+
+    
+.dataTables_wrapper  .dataTables_filter {
+    width: 100%;
+    float: none;
+    text-align: left;
+}

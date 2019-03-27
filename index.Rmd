@@ -2,10 +2,6 @@
 title: "Concursos da Marinha"
 author: "igorkf"
 date: "`r paste('Última atualização:', format(as.Date(file.info('base_marinha.xlsx')$mtime), format = '%d/%m/%Y'))`"
-# output:
-#   prettydoc::html_pretty:
-#     theme: architect
-#     highlight: github
 ---
 
 
@@ -53,8 +49,7 @@ cat(
 .dataTables_wrapper  .dataTables_filter {
     width: 100%;
     float: none;
-    text-align: left; 
-    //align the Search box to center. left and right also valid 
+    text-align: left;
 }
 </style>'
 )

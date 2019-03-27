@@ -8,3 +8,17 @@ code > span.ch { color: #4070a0; } /* Char */
 code > span.st { color: #183691; } /* String */
 code > span.co { color: #969896; font-style: italic; } /* Comment */
 code > span.ot { color: #007020; } /* Other */
+
+header {
+    padding-top: 10px;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #275da1;
+    text-align: center;
+}
+
+    
+.dataTables_wrapper  .dataTables_filter {
+    width: 100%;
+    float: none;
+    text-align: left;
+}
