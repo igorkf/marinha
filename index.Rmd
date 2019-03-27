@@ -18,6 +18,7 @@ Clique com o botão direito no nome do concurso e abra em uma nova aba.
 Você pode digitar alguma palavra chave no campo Procurar. 
 ```{r}
 
+# http://cdn.datatables.net/plug-ins/1.10.11/i18n/Portuguese.json
 portugues <-
 jsonlite::fromJSON(
 '{
