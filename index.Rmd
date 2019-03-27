@@ -18,13 +18,34 @@ Clique com o botão direito no nome do concurso e abra em uma nova aba.
 Você pode digitar alguma palavra chave no campo Procurar. 
 ```{r}
 
+portugues <-
+jsonlite::fromJSON(
+'{
+  "processing":   "A processar...",
+  "lengthmenu":   "Mostrar _MENU_ registos",
+  "zerorecords":  "Não foram encontrados resultados",
+  "info":         "Mostrando de _START_ até _END_ de _TOTAL_ registos",
+  "infoempty":    "Mostrando de 0 até 0 de 0 registos",
+  "infofiltered": "(filtrado de _MAX_ registos no total)",
+  "infopostfix":  "",
+  "search":       "Procurar:",
+  "url":          "",
+  "paginate": {
+    "first":    "Primeiro",
+    "previous": "Anterior",
+    "next":     "Seguinte",
+    "last":     "Último"
+  }
+}'
+)
+
 readxl::read_xlsx("base_marinha.xlsx") %>%
   rename(Concurso = concurso) %>% 
   DT::datatable(rownames = F, escape = F, extensions = c('Scroller', 'FixedHeader'),
                 class = 'cell-border stripe nowrap',
                 options = list(pageLength = 20, ordering = F,
                                scrollY = 300, scroller = T, scrollX = F,
-                language = list(url = 'http://cdn.datatables.net/plug-ins/1.10.11/i18n/Portuguese.json')))
+                language = portugues))
 
 ```
 
