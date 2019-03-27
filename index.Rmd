@@ -1,0 +1,62 @@
+---
+title: "Concursos da Marinha"
+author: "igorkf"
+date: "`r paste('Última atualização:', format(as.Date(file.info('base_marinha.xlsx')$mtime), format = '%d/%m/%Y'))`"
+# output:
+#   prettydoc::html_pretty:
+#     theme: architect
+#     highlight: github
+---
+
+
+```{r, include = F}
+
+library(tidyverse)
+knitr::opts_chunk$set(echo = F)
+
+```
+
+
+
+Clique com o botão direito no nome do concurso e abra em uma nova aba.  
+Você pode digitar alguma palavra chave no campo Procurar. 
+```{r}
+
+readxl::read_xlsx("base_marinha.xlsx") %>%
+  rename(Concurso = concurso) %>% 
+  DT::datatable(rownames = F, escape = F, extensions = c('Scroller', 'FixedHeader'),
+                class = 'cell-border stripe nowrap',
+                options = list(pageLength = 20, ordering = F,
+                               scrollY = 300, scroller = T, scrollX = F,
+                language = list(url = 'http://cdn.datatables.net/plug-ins/1.10.11/i18n/Portuguese.json')))
+
+```
+
+
+
+```{r, results='asis'}
+
+cat(
+'<style>
+header {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    border-bottom: solid 1px #275da1;
+    text-align: center;
+}
+</style>'
+)
+
+
+cat(
+'<style>
+.dataTables_wrapper  .dataTables_filter {
+    width: 100%;
+    float: none;
+    text-align: left; 
+    //align the Search box to center. left and right also valid 
+}
+</style>'
+)
+
+```

@@ -1,0 +1,5 @@
+output_dir: "."
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
