@@ -4,3 +4,5 @@ output:
     theme: architect
     highlight: github
     css: styles.css
+    includes:
+      in_header: GA_script.html
