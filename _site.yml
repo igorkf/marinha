@@ -3,6 +3,6 @@ output:
   prettydoc::html_pretty:
     theme: architect
     highlight: github
-    css: styles.css
     includes:
       in_header: GA_script.html
+    css: styles.css
